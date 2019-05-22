@@ -192,7 +192,7 @@ void modifyEmployee(eEmployee emp[], int cantEmp)
 
                                             if( tolower(confirma1) == 's')
                                             {
-                                                seguir = 'n';
+                                                salirModif = 'n';
                                             }
                                     break;
                                 default:
@@ -201,7 +201,7 @@ void modifyEmployee(eEmployee emp[], int cantEmp)
 
 
                             }
-                        }while(salirModif == 'n')
+                        }while(salirModif == 'n');
 
                 }
 
@@ -210,5 +210,19 @@ void modifyEmployee(eEmployee emp[], int cantEmp)
 
 }
 
+int removeEmployee(eEmployee emp[], int cantEmp)
+{
+    int indice;
+    int id;
 
+    id = getInt("Ingrese el id del empleado a modificar: ");
+
+    while(esNumerico(id) == 1)
+        {
+            id = getInt("Reingrese el id dele empleado a modificar");
+        }
+
+    indice = findEmployeeById(emp, cantEmp, id);
+
+}
 
